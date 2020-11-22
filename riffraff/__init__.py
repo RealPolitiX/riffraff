@@ -2,4 +2,4 @@
 # -*- coding: utf-8 -*-
 
 
-from . import marray
+from . import extrapolate, riffle

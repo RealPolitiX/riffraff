@@ -19,9 +19,10 @@ def riffle(*arr):
 
     arr = (map(np.ravel, arr))
     arrlen = np.array(map(len, arr))
+    minlen = np.min(arrlen)
+    if not(np.prod(arrlen == minlen)):
+        arr = [a[:minlen] for a in arr]
+    
+    riffarr = np.vstack(arr).reshape((-1,), order='F')
 
-    try:
-        riffarr = np.vstack(arr).reshape((-1,), order='F')
-        return riffarr
-    except:
-        raise ValueError('Input arrays need to have the same number of elements!')
+    return riffarr
