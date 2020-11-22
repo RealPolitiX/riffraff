@@ -1,2 +1,4 @@
 # riffraff
-Uncommon multi-list manipulation
+Uncommon list and array manipulation
+
+including riffling, extrapolation, etc.
